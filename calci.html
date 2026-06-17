@@ -1,41 +1,103 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
+  <li onclick="sum()"nk href="./src/output.css" rel="stylesheet">
 </head>
+
 <body class="w-screen h-screen flex justify-center items-center">
-  <div class="calculater shadow-2xl w-[500px] py-[20px] rounded-2xl md:h-[50vh] flex flex-col border-[1px] relative border-black items-center  justify-center">
-    
-     <h1 class="md:absolute top-0 text-[30px] md:text-[40px] font-black ">Arithmatic Operater</h1>
 
-     <div class="main md:w-[70%] w-[90%] flex flex-col md:flex-row md:m-[20px] items-center md:justify-between">
-        <label for="num1">First number</label>
-        <input class="border-[1px] border-black w-[50%] text-center" type="number" id="num1" >
-     </div>
+<div class="calculator shadow-2xl w-[500px] py-5 rounded-2xl border border-black flex flex-col items-center gap-4">
 
-     <div class="main md:w-[70%] w-[90%] flex flex-col md:flex-row items-center md:justify-between">
-        <label for="num2">second number</label>
-        <input class="border-[1px] border-black rounded-[3px] text-center w-[50%]" type="number" id="num2" >
-     </div>
+    <h1 class="text-3xl font-bold">Arithmetic Calculator</h1>
 
-     <div class="a w-[70%] flex justify-center items-center mt-[10px]">
-         <select name="sel" id="sel" class="border-[1px] border-black rounded-[3px]">
-             <option value="">select option</option>
-             <option value="add">add</option>
-             <option value="substract">substract</option>
-             <option value="multiply">multiply</option>
-             <option value="division">division</option>
-            </select>
+    <input
+      type="number"
+      id="num1"
+      placeholder="First Number"
+      class="border border-black p-2 rounded text-center w-[80%]"
+    >
+
+    <input
+      type="number"
+      id="num2"
+      placeholder="Second Number"
+      class="border border-black p-2 rounded text-center w-[80%]"
+    >
+
+    <div class="flex gap-2 flex-wrap justify-center">
+        <button onclick="add()" class="border border-black px-3 py-1 rounded">
+            Add
+        </button>
+
+        <button onclick="sub()" class="border border-black px-3 py-1 rounded">
+            Subtract
+        </button>
+
+        <button onclick="mul()" class="border border-black px-3 py-1 rounded">
+            Multiply
+        </button>
+
+        <button onclick="divide()" class="border border-black px-3 py-1 rounded">
+            Divide
+        </button>
+         <button onclick="re()" type="reset" class="border border-black px-3 py-1 rounded">
+            Reset
+        </button>
     </div>
 
-     <div class="main w-[70%] flex justify-center gap-[5px] md:justify-between mt-[20px] ">
-        <button class="result border-[1px] border-black rounded-[3px] px-[8px] py-[3px]">result</button>
-        <input class="border-[1px] border-black rounded-[3px] text-center" type="number"  >
-     </div>
+    <input
+      type="text"
+      id="result"
+      placeholder="Result"
+      readonly
+      class="border border-black p-2 rounded text-center w-[80%]"
+    >
 
-  </div>
- <script src="num.js"></script>
+</div>
+
+<script src="num.js"></script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="src/output.css">
+    <title>Document</title>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-700">
+    <div class="body pb-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.4)] w-[350px] h-[460px] flex flex-col items-center gap-[20px] mx-auto pt-[20px] rounded-xl bg-gray-600 border border-gray-400">
+       <input class="w-[80%] h-[70px] bg-gray-800 text-white text-right px-4 rounded-lg text-4xl font-bold" placeholder="0" id="display" type="text" readonly>
+    
+    <div  class="buttons a w-[80%] grid grid-cols-4 gap-[10px] justify-center">
+        <button class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">7</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">8</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">9</button>
+    <button class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">+</button>
+
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">4</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">5</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">6</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">-</button>
+    
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">1</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">2</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">3</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">*</button>
+
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">0</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">.</button>
+    <button   class="h-[60px] text-2xl  bg-white rounded-[5px] font-black">%</button>
+    <button id="res" class="px-[20px]  cursor-pointer bg-orange-600 active:bg-orange-700 hover:bg-orange-500 list-none  py-[5px] text-[30px] font-black text-black rounded-[3px]">=</button>
+</div>
+<div class="a w-[80%] flex justify-center">
+    <button id="c" class="w-full bg-red-500 hover:bg-red-600 active:scale-105 active:bg-red-500 text-white h-[60px] rounded-lg text-2xl font-bold">C</button> 
+</div>
+</div>
+<script src="ak.js"></script>
 </body>
 </html>
